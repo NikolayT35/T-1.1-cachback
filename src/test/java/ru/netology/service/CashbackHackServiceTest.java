@@ -1,6 +1,7 @@
 package ru.netology.service;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
 
 import static org.junit.Assert.assertEquals;
 
@@ -18,19 +19,17 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldCashBackBoundaryLessThan1000() {
-        assertEquals(service.remain(999), 1);
-    }
-
-
-    @Test
-    public void shouldCashBack1000IfZero() {
-        assertEquals(service.remain(0), 1000);
-    }
-
-    @Test
     public void shouldCashBackNoMore() {
         assertEquals(service.remain(1000), 0);
+    }
+
+   @Test
+    public void shouldCashBackBoundaryLessThan1000() {
+        Assertions.assertEquals(service.remain(999), 1);
+    }
+    @Test
+    public void shouldCashBackBoundary1() {
+        Assertions.assertEquals(service.remain(1), 999);
     }
 }
 
