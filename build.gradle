@@ -22,13 +22,10 @@ dependencies {
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG()
 }
 
 test {
     useJUnitPlatform()
 }
 
-test {
-    useJUnit()
-}
