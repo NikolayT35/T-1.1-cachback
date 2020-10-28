@@ -13,7 +13,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldCashBackBoundaryMoreThan1000() {
+    public void shouldCashBackBoundaryMoreThanThousand() {
         assertEquals(service.remain(1001), 999);
     }
 
@@ -21,9 +21,10 @@ public class CashbackHackServiceTest {
     public void shouldCashBackBoundaryLessThan1000() {
         assertEquals(service.remain(999), 1);
     }
+
     @Test
-    public void shouldCashBackBoundary1() {
-        assertEquals(service.remain(1), 999);
+    public void shouldCashBackBoundaryLessThanThousand() {
+        assertEquals(service.remain(999), 1);
     }
 
     @Test
