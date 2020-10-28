@@ -22,10 +22,6 @@ public class CashbackHackServiceTest {
         assertEquals(service.remain(999), 1);
     }
 
-    @Test
-    public void shouldCashBackBoundaryLessThanThousand() {
-        assertEquals(service.remain(999), 1);
-    }
 
     @Test
     public void shouldCashBack1000IfZero() {
